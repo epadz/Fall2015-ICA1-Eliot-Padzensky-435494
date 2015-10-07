@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Rate Your Coffee</title>
+<style type="text/css">
+h1{
+	text-align:center;
+}
+</style>
+</head>
+
+<body>
+	<h1>Rate Your Coffee</h1>
+    <p>Input the coffee for which you'd like to find the past reviews</p><br/>
+    <form action="coffee-results.php" method="post">
+    	<input type="text" name="acoffee" id="acoffee" required><label for="acoffee">coffee name</label><br/>
+        <input type="submit" value="search" /><br/>
+    </form>
+    <p>Correctly input the user and coffee name to rate a coffee</p>
+    <form action="coffee-back-end.php" method="post">
+    	<input type="text" name="user" id="user" required><label for="user">user</label><br/>
+        <input type="text" name="coffee" id="coffee" required><label for="coffee">coffee</label><br/>
+        <label>rating</label>
+        <input type="radio" name="userRating" value="0.1" id="r1" /><label for="r1">1</label>
+        <input type="radio" name="userRating" value="0.2" id="r2" /><label for="r2">2</label>
+        <input type="radio" name="userRating" value="0.3" id="r3" /><label for="r3">3</label>
+        <input type="radio" name="userRating" value="0.4" id="r4" /><label for="r4">4</label>
+        <input type="radio" name="userRating" value="0.5" id="r5" /><label for="r5">5</label><br/>
+        <textarea name="comments" id="comments"></textarea><label for="comments">comments</label><br/>
+        <input type="submit" value="rate" />
+    </form>
+</body>
+</html>
